@@ -1,0 +1,10 @@
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+     font-size: 100%;
+}
+.source {
+font-size: 50%;
+text-align: right;
+position: relative;
+right: 0;
+bottom: 0;
+}
