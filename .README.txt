@@ -1,0 +1,3 @@
+stats306_master will be deleted and replaced with a fresh copy of
+https://github.com/terhorst/stats306 after each login. Be sure to save your
+work elsewhere if you want it to persist between logins.
