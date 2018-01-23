@@ -1,2 +1,5 @@
 #!/bin/sh
-git clone https://github.com/terhorst/stats306 || (cd stats306 ; git stash; git pull; git stash pop)
+rm -rf stats306_master
+git clone https://github.com/terhorst/stats306 stats306_master
+chmod -R 555 stats306_master
+cp stats306_master/.README.txt .
