@@ -3,3 +3,4 @@
 .nbgrader.log
 .DS_Store
 ps*/ps*.zip
+lecture*/Lecture*.html
