@@ -1,5 +1,5 @@
 #!/bin/sh
-rm -rf stats306_master
-git clone https://github.com/terhorst/stats306 stats306_master
-chmod -R 555 stats306_master
-cp stats306_master/.README.txt ./README.txt
+rm -rf stats306
+git clone https://github.com/terhorst/stats306 stats306
+chmod -R 555 stats306
+cp stats306/.README.txt ./README.txt
