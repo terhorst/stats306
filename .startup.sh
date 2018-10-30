@@ -12,8 +12,8 @@ then
 else
     cd $LOCALREPO
     chmod -R 777 .
-    git reset --hard HEAD
-    git pull --allow-unrelated-histories -f $REPOSRC
+    git fetch
+    git reset --hard origin/master
     cd ..
 fi
 
