@@ -1,10 +1,24 @@
-#!/bin/sh
-mkdir -p stats306
-chmod -R 777 stats306
-rm -rf stats306
-git clone --depth 1 https://github.com/terhorst/stats306 stats306
+#!/bin/bash -x
+exec > .log.txt 2>&1
+REPOSRC=https://github.com/terhorst/stats306
+LOCALREPO=stats306
+
+# We do it this way so that we can abstract if from just git later on
+LOCALREPO_VC_DIR=$LOCALREPO/.git
+
+if [ ! -d $LOCALREPO_VC_DIR ]
+then
+    git clone --depth 1 $REPOSRC $LOCALREPO
+else
+    cd $LOCALREPO
+    chmod -R 777 .
+    git reset --hard HEAD
+    git pull --allow-unrelated-histories -f $REPOSRC
+    cd ..
+fi
+
 chmod -R a=rX stats306
-rf -f README.txt .Rprofile
+rm -f README.txt .Rprofile
 cp stats306/.README.txt ./README.txt
 cp stats306/.Rprofile .Rprofile
 chmod 444 .Rprofile README.txt
