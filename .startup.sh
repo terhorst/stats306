@@ -12,6 +12,7 @@ then
 else
     cd $LOCALREPO
     chmod -R 777 .
+    rm -f .git/index.lock
     git fetch
     git reset --hard origin/master
     cd ..
@@ -25,3 +26,4 @@ chmod 444 .Rprofile README.txt
 mkdir -p 'problem sets'
 rsync -av --ignore-existing stats306/ps* 'problem sets/'
 chmod -R a=rwX 'problem sets'
+rm -f core.ZMQ*
