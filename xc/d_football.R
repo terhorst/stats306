@@ -129,6 +129,7 @@ play_repeatedly <- function(strategy1, strategy2, k = 100, n = 5) {
     # play 2 * k games against each other, where each strategy moves first
     # k times.
     # return a vector of (1, 2) indicating which strategy won each time.
+    set.seed(1)
     res <- c(
         sapply(1:k, function(.) .play_game(strategy1, strategy2, n)),
         -sapply(1:k, function(.) .play_game(strategy2, strategy1, n))
