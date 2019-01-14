@@ -18,7 +18,7 @@ else
     cd ..
 fi
 
-chmod -R a=rX stats306
+# chmod -R a=rX stats306 
 rm -f README.txt .Rprofile
 cp stats306/.README.txt ./README.txt
 cp stats306/.Rprofile .Rprofile
