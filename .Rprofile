@@ -5,4 +5,3 @@ options(jupyter.plot_mimetypes="image/png",
         repr.plot.width = 4, 
         repr.plot.height = 3,
         max.print = 100)
-options(jupyter.display_mimetypes="text/plain")
