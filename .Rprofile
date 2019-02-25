@@ -4,5 +4,3 @@ install.packages <- function(pkg="packagename", ...) {
 options(jupyter.plot_mimetypes="image/png",
         repr.plot.width=4, 
         repr.plot.height=3)
-
-
