@@ -19,6 +19,7 @@ else
 fi
 
 
+rm -rf stats306
 rm -rf lecture00
 rm -f core.ZMQ*
 chmod -R a=rX $LOCALREPO
