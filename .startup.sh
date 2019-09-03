@@ -18,15 +18,14 @@ else
     cd ..
 fi
 
-rsync --ignore-existing -ra .stats306_fresh stats306
 
+rm -f core.ZMQ*
 chmod -R a=rX $LOCALREPO
 rm -f README.txt .Rprofile
 cp $LOCALREPO/.README.txt ./README.txt
 cp $LOCALREPO/.Rprofile .Rprofile
 chmod 444 .Rprofile README.txt
-chmod 744 -R stats306
 mkdir -p 'problem sets'
-rsync -av --ignore-existing .stats306_fresh/ps* 'problem sets/'
+rsync --ignore-existing -ra $LOCALREPO/lectures lectures
+rsync -av --ignore-existing $LOCALREPO/ps* 'problem sets/'
 chmod -R a=rwX 'problem sets'
-rm -f core.ZMQ*
