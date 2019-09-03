@@ -26,6 +26,7 @@ cp $LOCALREPO/.README.txt ./README.txt
 cp $LOCALREPO/.Rprofile .Rprofile
 chmod 444 .Rprofile README.txt
 mkdir -p 'problem sets'
-rsync --ignore-existing -ra $LOCALREPO/lectures lectures
+mkdir -p 'lectures sets'
+rsync --ignore-existing -ra $LOCALREPO/lecture?? lectures
 rsync -av --ignore-existing $LOCALREPO/ps* 'problem sets/'
 chmod -R a=rwX 'problem sets'
