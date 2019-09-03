@@ -25,7 +25,7 @@ rm -f README.txt .Rprofile
 cp "$LOCALREPO/.README.txt" ./README.txt
 cp "$LOCALREPO/.Rprofile" .Rprofile
 chmod 444 .Rprofile README.txt
-rsync --ignore-existing -ra "$LOCALREPO/lectures" lectures
-rsync -av --ignore-existing "$LOCALREPO/problem sets" "problem sets"
+rsync --ignore-existing -ra "$LOCALREPO/lectures" .
+rsync -av --ignore-existing "$LOCALREPO/problem sets" .
 chmod -R a=rwX 'problem sets'
 chmod -R a=rwX 'lectures'
