@@ -22,11 +22,10 @@ fi
 rm -f core.ZMQ*
 chmod -R a=rX $LOCALREPO
 rm -f README.txt .Rprofile
-cp $LOCALREPO/.README.txt ./README.txt
-cp $LOCALREPO/.Rprofile .Rprofile
+cp "$LOCALREPO/.README.txt" ./README.txt
+cp "$LOCALREPO/.Rprofile" .Rprofile
 chmod 444 .Rprofile README.txt
-mkdir -p 'problem sets'
-mkdir -p 'lectures sets'
-rsync --ignore-existing -ra $LOCALREPO/lecture?? lectures
-rsync -av --ignore-existing $LOCALREPO/ps* 'problem sets/'
+rsync --ignore-existing -ra "$LOCALREPO/lectures" lectures
+rsync -av --ignore-existing "$LOCALREPO/problem sets" "problem sets"
 chmod -R a=rwX 'problem sets'
+chmod -R a=rwX 'lectures'
