@@ -19,8 +19,7 @@ else
 fi
 
 
-rm -rf stats306
-rm -rf lecture00
+(chmod -R 777 stats306 && rm -rf stats306) || true
 rm -f core.ZMQ*
 chmod -R a=rX $LOCALREPO
 rm -f README.txt .Rprofile
