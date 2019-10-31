@@ -20,7 +20,8 @@ fi
 
 
 (chmod -R 777 stats306 && rm -rf stats306) || true
-rm -f core.ZMQ*
+find . -name 'core.ZMQ*' -delete
+find . -name 'core.R*' -delete
 chmod -R a=rX $LOCALREPO
 rm -f README.txt .Rprofile
 cp "$LOCALREPO/.README.txt" ./README.txt
